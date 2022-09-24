@@ -1,12 +1,12 @@
-import { LitElement, html, css } from "lit";
+import { html, LitElement } from "lit";
 import { phbStyles } from "./phb-styles.js";
-import { SessionEntry } from "./session-entry.js";
 import { getAllSessions } from "./session-manager.js";
+import { SessionEntry } from "./session-entry.js";
 
 export class SessionView extends LitElement {
   static get properties() {
     return {
-      selectedSessionId: { type: Number },
+      selectedBookPage: { type: Number },
     };
   }
 
@@ -17,53 +17,90 @@ export class SessionView extends LitElement {
   constructor() {
     super();
     this.sessions = getAllSessions();
-    this.selectedSessionId = this.sessions.reverse()[0].id;
-    console.log(this.selectedSessionId);
-    console.log(this.sessions);
+    this.bookPages =
+      Math.floor(this.sessions[this.sessions.length - 1].id / 2) + 1;
+    this.selectedBookPage = this.bookPages;
+    this.titles = this.sessions.map((session) => {
+      return { title: session.ocDate, page: session.id };
+    });
   }
 
-  previousSession() {
-    console.log("tes");
-    this.selectedSessionId = this.selectedSessionId - 1;
+  previousPages() {
+    this.selectedBookPage = this.selectedBookPage - 1;
+    console.log(this.selectedBookPage);
   }
-  nextSession() {
-    this.selectedSessionId = this.selectedSessionId + 1;
+  nextPages() {
+    this.selectedBookPage = this.selectedBookPage + 1;
   }
 
   render() {
-    console.log("render", this.sessions);
-    console.log(
-      "prev",
-      this.selectedSessionId === this.sessions[this.sessions.length - 1].id
-    );
-    console.log("next", this.selectedSessionId === this.sessions[0].id);
+    const itemTemplates = [];
+    for (let i = 1; i <= this.sessions.length + 1; i += 2) {
+      const leftSession = this.sessions[i - 2];
+      const rightSession = this.sessions[i - 1];
+      if (leftSession) {
+        itemTemplates.push(html`<div
+          class="phb page left-session ${Math.floor(leftSession.id / 2) + 1 !==
+          this.selectedBookPage
+            ? "hidden"
+            : ""}"
+        >
+          <session-entry
+            id="${leftSession.id}"
+            ocDate="${leftSession.ocDate}"
+            icDate="${leftSession.icDate}"
+            .characters="${leftSession.characters}"
+            .happenings="${leftSession.happenings}"
+          ></session-entry>
+          <div class="pageNumber auto"></div>
+          <div class="footnote">
+            Session ${leftSession.id}: ${leftSession.ocDate}
+          </div>
+        </div>`);
+      }
+
+      if (rightSession) {
+        itemTemplates.push(html` <div
+          class="phb page right-session ${Math.floor(rightSession.id / 2) +
+            1 !==
+          this.selectedBookPage
+            ? "hidden"
+            : ""}"
+        >
+          <session-entry
+            id="${rightSession.id}"
+            ocDate="${rightSession.ocDate}"
+            icDate="${rightSession.icDate}"
+            .characters=${rightSession.characters}
+            .happenings=${rightSession.happenings}
+          ></session-entry>
+          <div class="pageNumber auto"></div>
+          <div class="footnote">
+            Session ${rightSession.id}: ${rightSession.ocDate}
+          </div>
+        </div>`);
+      }
+    }
+
     return html`
       <h1>Sessions</h1>
-      <button
-        @click="${this.previousSession}"
-        ?hidden="${this.selectedSessionId ===
-        this.sessions[this.sessions.length - 1].id}"
-      >
-        Prev
-      </button>
-      <button
-        @click="${this.nextSession}"
-        ?hidden="${this.selectedSessionId === this.sessions[0].id}"
-      >
-        Next
-      </button>
-      ${this.sessions.map(
-        (oSession) =>
-          html`<div class="phb">
-            <session-entry
-              id="${oSession.id}"
-              ocDate="${oSession.ocDate}"
-              icDate="${oSession.icDate}"
-              .characters=${oSession.characters}
-              .happenings=${oSession.happenings}
-            ></session-entry>
-          </div>`
-      )}
+      <div style="float:left; width:100%">
+        <button
+          @click="${this.previousPages}"
+          ?hidden="${this.selectedBookPage ===
+          Math.floor(this.sessions[0].id / 2) + 1}"
+        >
+          Prev
+        </button>
+        <button
+          @click="${this.nextPages}"
+          ?hidden="${this.selectedBookPage ===
+          Math.floor(this.sessions[this.sessions.length - 1].id / 2) + 1}"
+        >
+          Next
+        </button>
+      </div>
+      ${itemTemplates}
     `;
   }
 }
