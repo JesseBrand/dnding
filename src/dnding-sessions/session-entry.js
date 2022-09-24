@@ -1,11 +1,11 @@
-import { LitElement, html, css } from "lit";
+import { css, html, LitElement } from "lit";
 import { commaAndList } from "../util.js";
-import { phbStyles } from "./phb-styles.js";
+import { sessionStyles } from "./session-styles.js";
 
 export class SessionEntry extends LitElement {
   static get styles() {
     return [
-      phbStyles,
+      sessionStyles,
       css`
         .purple-header {
           color: purple;
@@ -45,8 +45,6 @@ export class SessionEntry extends LitElement {
         <h5 class="purple-header">The Party</h5>
 
         <p>${commaAndList(this.characters)}:</p>
-        <span class="pageNumber"></span>
-        <span class="footnote">Session ${this.id}: ${this.ocDate}</span>
       </div>
       <slot></slot>
     `;
