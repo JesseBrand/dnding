@@ -1,11 +1,11 @@
-import { LitElement, html, css } from "lit";
+import { css, html, LitElement } from "lit";
 import { commaAndList } from "../util.js";
-import { phbStyles } from "./phb-styles.js";
+import { sessionStyles } from "./session-styles.js";
 
 export class SessionEntry extends LitElement {
   static get styles() {
     return [
-      phbStyles,
+      sessionStyles,
       css`
         .purple-header {
           color: purple;
@@ -34,16 +34,20 @@ export class SessionEntry extends LitElement {
 
   render() {
     return html`
-      <div class="session">
-        <h2>Session ${this.id}: ${this.ocDate}</h2>
-        <p>IC Date: ${this.icDate}</p>
-        <p>The party, consisting of ${commaAndList(this.characters)}:
-          <ul>
-            ${this.happenings.map(
-              (sHappening) => html`<li>${sHappening};</li>`
-            )}
-          </ul>
-        </p>
+        <span class="topnote">Date: ${this.icDate}</span>
+        <h1>The Title of the Story</h1>
+        <p>The party members</p>
+        <dl>
+          ${this.happenings.map(
+            (sHappening) =>
+              html`<dd>${sHappening};</dd>
+                <br />`
+          )}
+        </dl>
+        <div class="columnSplit"></div>
+        <h5 class="purple-header">The Party</h5>
+
+        <p>${commaAndList(this.characters)}:</p>
       </div>
       <slot></slot>
     `;
