@@ -1,11 +1,11 @@
 import { css, html, LitElement } from "lit";
 import { commaAndList } from "../util.js";
-import { sessionStyles } from "./session-styles.js";
+import { sessionEntryStyles } from "./session-entry-styles.js";
 
 export class SessionEntry extends LitElement {
   static get styles() {
     return [
-      sessionStyles,
+      sessionEntryStyles,
       css`
         .purple-header {
           color: purple;
