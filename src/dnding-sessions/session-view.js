@@ -1,5 +1,5 @@
 import { html, LitElement } from "lit";
-import { phbStyles } from "./phb-styles.js";
+import { sessionViewStyles } from "./session-view-styles.js";
 import { getAllSessions } from "./session-manager.js";
 import { SessionEntry } from "./session-entry.js";
 
@@ -11,7 +11,7 @@ export class SessionView extends LitElement {
   }
 
   static get styles() {
-    return [phbStyles];
+    return [sessionViewStyles];
   }
 
   constructor() {
