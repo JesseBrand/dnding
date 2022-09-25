@@ -34,13 +34,9 @@ export class SessionEntry extends LitElement {
         <span class="topnote">Date: ${this.icDate}</span>
         <h1>The Title of the Story</h1>
         <p>The party members</p>
-        <dl>
-          ${this.happenings.map(
-            (sHappening) =>
-              html`<dd>${sHappening};</dd>
-                <br />`
-          )}
-        </dl>
+        <ul>
+          ${this.happenings.map((sHappening) => html`<li>${sHappening};</li>`)}
+        </ul>
         <div class="columnSplit"></div>
 
         <h5 class="purple-header">The Party</h5>
