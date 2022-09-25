@@ -42,9 +42,16 @@ export class SessionEntry extends LitElement {
           )}
         </dl>
         <div class="columnSplit"></div>
-        <h5 class="purple-header">The Party</h5>
 
+        <h5 class="purple-header">The Party</h5>
         <p>${commaAndList(this.characters)}:</p>
+        <blockquote>
+          <h3>Loot</h3>
+          <ul>
+            <li>Some sword</li>
+            <li>Some rocks</li>
+            <li>Shiny Metal</li></ul>
+        </blockquote>
       </div>
       <slot></slot>
     `;
