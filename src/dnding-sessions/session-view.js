@@ -112,7 +112,7 @@ export class SessionView extends LitElement {
           Next
         </button>
       </div>
-      ${itemTemplates}
+      <div class="book">${itemTemplates}</div>
     `;
   }
 }

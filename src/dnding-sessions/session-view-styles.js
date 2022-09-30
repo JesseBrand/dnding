@@ -85,12 +85,9 @@ export const sessionViewStyles = css`
 
   .phb.left-session {
     float: left;
-    margin-left: 3.32em;
   }
 
   .phb.right-session {
-    float: right;
-    margin-right: 3.32em;
   }
 
   .phb .footnote {
