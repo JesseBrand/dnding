@@ -37,7 +37,7 @@ export class SessionEntry extends LitElement {
         <ul>
           ${this.happenings.map((sHappening) => html`<li>${sHappening};</li>`)}
         </ul>
-        <div class="columnSplit"></div>
+        <div class="column-break"></div>
 
         <h5 class="purple-header">The Party</h5>
         <p>${commaAndList(this.characters)}:</p>

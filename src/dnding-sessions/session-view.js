@@ -3,6 +3,7 @@ import { sessionViewStyles } from "./session-view-styles.js";
 import { getAllSessions } from "./session-manager.js";
 import { SessionEntry } from "./session-entry.js";
 import { SessionTOC } from "./session-toc.js";
+import { SessionIntro } from "./session-intro.js";
 
 export class SessionView extends LitElement {
   static get properties() {
@@ -43,7 +44,9 @@ export class SessionView extends LitElement {
         ? "hidden"
         : ""}"
     >
-      <div></div>
+      <div>
+        <session-intro></session-intro>
+      </div>
     </div>`);
 
     //first page - right side - table of contents? image?
