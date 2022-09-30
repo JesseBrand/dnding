@@ -35,6 +35,10 @@ export const sessionViewStyles = css`
     page-break-after: always;
   }
 
+  .phb-black-page {
+    counter-increment: phb-page-numbers;
+  }
+
   .phb.page {
     counter-increment: phb-page-numbers;
   }
