@@ -1,6 +1,6 @@
 import { css } from "lit";
 
-export const sessionEntryStyles = css`
+export const sessionIntroStyles = css`
   :host {
     font-family: BookSanity;
     font-size: 0.317cm;
@@ -210,6 +210,11 @@ export const sessionEntryStyles = css`
   h1 {
     column-span: all;
     font-size: 0.987cm;
+    -webkit-column-span: all;
+    -moz-column-span: all;
+  }
+  h1 + p {
+    column-span: all;
     -webkit-column-span: all;
     -moz-column-span: all;
   }
