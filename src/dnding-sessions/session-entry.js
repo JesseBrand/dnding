@@ -31,7 +31,6 @@ export class SessionEntry extends LitElement {
 
   render() {
     return html`
-        <span class="topnote">Date: ${this.icDate}</span>
         <h1>The Title of the Story</h1>
         <p>The party members</p>
         <ul>
