@@ -25,7 +25,6 @@ export const sessionViewStyles = css`
     padding: 1cm 1.7cm;
     padding-bottom: 1.5cm;
     background-color: #eee5ce;
-    background-image: url("/assets/img/5e/background.png");
     font-family: BookSanity;
     font-size: 0.317cm;
     text-rendering: optimizeLegibility;
@@ -120,14 +119,12 @@ export const sessionViewStyles = css`
   .book {
     perspective: 250vw;
     width: 95.3%;
-    padding-bottom: 10em;
   }
   .book .pages {
     position: relative;
     transform-style: preserve-3d;
     backface-visibility: hidden;
     border-radius: 4px;
-    //box-shadow: 0 0 0 1px #e3dfd8;
   }
   .book .page {
     float: none;
@@ -157,11 +154,12 @@ export const sessionViewStyles = css`
     transform: rotateY(0deg);
     right: 0;
     border-radius: 0 4px 4px 0;
-    /*background-image: linear-gradient(
-      to right,
-      rgba(0, 0, 0, 0.15) 0%,
-      rgba(0, 0, 0, 0) 10%
-    );*/
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.15) 0%,
+        rgba(0, 0, 0, 0) 10%
+      ),
+      url("/assets/img/5e/background.png");
   }
   .book .page:nth-child(even):hover {
     transform: rotateY(-30deg);
@@ -178,14 +176,15 @@ export const sessionViewStyles = css`
     transform-origin: 100% 0;
     left: 0;
     border-radius: 4px 0 0 4px;
-    //border-color: black;
-    /*background-image: linear-gradient(
-      to left,
-      rgba(0, 0, 0, 0.12) 0%,
-      rgba(0, 0, 0, 0) 10%
-    );*/
+    background-image: linear-gradient(
+        to left,
+        rgba(0, 0, 0, 0.12) 0%,
+        rgba(0, 0, 0, 0) 10%
+      ),
+      url("/assets/img/5e/background.png");
   }
   .book .page:nth-child(odd):before {
+    background: rgba(0, 0, 0, 0.2);
   }
   .book .page.grabbing {
     transition: none;
@@ -195,7 +194,7 @@ export const sessionViewStyles = css`
     transform: rotateY(-180deg);
   }
   .book .page.flipped:nth-child(even):before {
-    //background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.2);
   }
   .book .page.flipped:nth-child(odd) {
     pointer-events: all;
@@ -205,13 +204,17 @@ export const sessionViewStyles = css`
     transform: rotateY(30deg);
   }
   .book .page.flipped:nth-child(odd):hover:before {
-    //background: rgba(0, 0, 0, 0.03);
+    background: rgba(0, 0, 0, 0.03);
   }
   .book .page.flipped:nth-child(odd):before {
-    //background: rgba(0, 0, 0, 0);
+    background: rgba(0, 0, 0, 0);
   }
   *,
+  * :before,
+  *:after {
+    box-sizing: border-box;
+  }
   .page:nth-child(even) {
-    //background-position: right top;
+    background-position: right top;
   }
 `;
