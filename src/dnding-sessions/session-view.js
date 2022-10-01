@@ -42,7 +42,10 @@ export class SessionView extends LitElement {
       //Or var page = pages[i];
       pages[i].pageNum = i + 1;
       pages[i].onclick = function () {
-        if (this.pageNum === 1 || this.pageNum === pages.length) {
+        if (
+          this.pageNum === 1 ||
+          (this.pageNum === pages.length && this.pageNum % 2 === 0)
+        ) {
           //do nothing, no need to flip pages when the last page is reached or when the first page is reached
         } else if (this.pageNum % 2 === 0) {
           this.classList.add("flipped");
