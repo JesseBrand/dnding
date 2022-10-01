@@ -4,6 +4,10 @@ export const sessionViewStyles = css`
   body {
     counter-reset: phb-page-numbers;
   }
+  h1 {
+    font-family: xalterion;
+    color: white;
+  }
   * {
     -webkit-print-color-adjust: exact;
   }
@@ -108,7 +112,7 @@ export const sessionViewStyles = css`
   .book {
     transition: opacity 0.4s 0.2s;
     align-content: center;
-    background: rgba(222, 255, 0, 0.75);
+    background: rgba(0, 0, 0, 0.75);
     box-shadow: rgba(0, 0, 0, 0.5) 0 1em 3em;
   }
   .page {
@@ -120,7 +124,9 @@ export const sessionViewStyles = css`
   }
   .book {
     perspective: 250vw;
-    width: 95.3%;
+    width: 1632px;
+    height: 1056px;
+    margin-bottom: 3em;
   }
   .book .pages {
     position: relative;
