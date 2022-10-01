@@ -108,6 +108,8 @@ export const sessionViewStyles = css`
   .book {
     transition: opacity 0.4s 0.2s;
     align-content: center;
+    background: rgba(222, 255, 0, 0.75);
+    box-shadow: rgba(0, 0, 0, 0.5) 0 1em 3em;
   }
   .page {
     float: left;

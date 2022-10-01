@@ -80,6 +80,7 @@ export class SessionView extends LitElement {
       //const rightSession = this.sessions[i - 1];
       if (session) {
         sessionPages.push(html`<div class="phb page">
+          <span class="topnote">Date: ${session.icDate}</span>
           <session-entry
             id="${session.id}"
             ocDate="${session.ocDate}"
