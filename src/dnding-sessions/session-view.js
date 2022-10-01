@@ -42,7 +42,8 @@ export class SessionView extends LitElement {
       //Or var page = pages[i];
       pages[i].pageNum = i + 1;
       pages[i].onclick = function () {
-        if (this.pageNum === 1) {
+        if (this.pageNum === 1 || this.pageNum === pages.length) {
+          //do nothing, no need to flip pages when the last page is reached or when the first page is reached
         } else if (this.pageNum % 2 === 0) {
           this.classList.add("flipped");
           this.nextElementSibling.classList.add("flipped");
@@ -63,27 +64,19 @@ export class SessionView extends LitElement {
   }
 
   render() {
-    const itemTemplates = [];
+    const sessionPages = [];
     //itemTemplates.push(html``);
     // first page - left side - introduction?
-    itemTemplates.push(html`<div class="phb page">
-      <div>
-        <session-intro></session-intro>
-      </div>
-    </div>`);
+    sessionPages.push(html``);
 
     //first page - right side - table of contents? image?
-    itemTemplates.push(html`<div class="phb page">
-      <div class="toc">
-        <session-toc></session-toc>
-      </div>
-    </div>`);
+    sessionPages.push(html``);
 
     for (let i = 0; i < this.sessions.length; i++) {
       const session = this.sessions[i];
       //const rightSession = this.sessions[i - 1];
       if (session) {
-        itemTemplates.push(html`<div class="phb page">
+        sessionPages.push(html`<div class="phb page">
           <session-entry
             id="${session.id}"
             ocDate="${session.ocDate}"
@@ -95,29 +88,21 @@ export class SessionView extends LitElement {
           <div class="footnote">Session ${session.id}: ${session.ocDate}</div>
         </div>`);
       }
-
-      /*if (rightSession) {
-        itemTemplates.push(html` <div class="phb page right-session">
-          <session-entry
-            id="${rightSession.id}"
-            ocDate="${rightSession.ocDate}"
-            icDate="${rightSession.icDate}"
-            .characters=${rightSession.characters}
-            .happenings=${rightSession.happenings}
-          ></session-entry>
-          <div class="pageNumber auto"></div>
-          <div class="footnote">
-            Session ${rightSession.id}: ${rightSession.ocDate}
-          </div>
-        </div>`);
-      }*/
     }
 
     return html`
       <h1>Sessions</h1>
       <div class="book">
         <div class="phb-black-page"></div>
-        <div class="pages">${itemTemplates}</div>
+        <div class="pages">
+          <div class="phb page">
+            <session-intro></session-intro>
+          </div>
+          <div class="phb page">
+            <session-toc></session-toc>
+          </div>
+          ${sessionPages}
+        </div>
       </div>
     `;
   }
