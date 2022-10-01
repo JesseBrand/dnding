@@ -316,26 +316,6 @@ export class SessionTOC extends LitElement {
             <a><span>Some title of the session</span><span> 1</span></a>
           </h4>
         </li>
-        <li>
-          <h4>
-            <a><span>Some title of the session</span><span> 1</span></a>
-          </h4>
-        </li>
-        <li>
-          <h4>
-            <a><span>Some title of the session</span><span> 1</span></a>
-          </h4>
-        </li>
-        <li>
-          <h4>
-            <a><span>Some title of the session</span><span> 1</span></a>
-          </h4>
-        </li>
-        <li>
-          <h4>
-            <a><span>Some title of the session</span><span> 1</span></a>
-          </h4>
-        </li>
       </ul>`;
   }
 }

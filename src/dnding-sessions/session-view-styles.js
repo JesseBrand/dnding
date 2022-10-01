@@ -19,9 +19,7 @@ export const sessionViewStyles = css`
     -webkit-column-gap: 1cm;
     -moz-column-gap: 1cm;
     position: relative;
-    z-index: 15;
     box-sizing: border-box;
-    overflow: hidden;
     height: 279.4mm;
     width: 215.9mm;
     padding: 1cm 1.7cm;
@@ -37,6 +35,8 @@ export const sessionViewStyles = css`
 
   .phb-black-page {
     counter-increment: phb-page-numbers;
+    height: 0;
+    width: 0;
   }
 
   .phb.page {
@@ -58,13 +58,13 @@ export const sessionViewStyles = css`
     background-image: url("/assets/img/5e/bottom_background.png");
     background-size: cover;
   }
-  .phb:nth-child(even):after {
+  .phb:nth-child(odd):after {
     transform: scaleX(-1);
   }
-  .phb:nth-child(even) .pageNumber {
+  .phb:nth-child(odd) .pageNumber {
     left: 2px;
   }
-  .phb:nth-child(even) .footnote {
+  .phb:nth-child(odd) .footnote {
     left: 80px;
     text-align: left;
   }
@@ -79,19 +79,6 @@ export const sessionViewStyles = css`
   }
   .phb .pageNumber.auto::after {
     content: counter(phb-page-numbers);
-  }
-
-  .phb.hidden {
-    visibility: hidden;
-    height: 0;
-    padding: 0;
-  }
-
-  .phb.left-session {
-    float: left;
-  }
-
-  .phb.right-session {
   }
 
   .phb .footnote {
@@ -117,5 +104,114 @@ export const sessionViewStyles = css`
   .phb .toc {
     -webkit-column-break-inside: avoid;
     column-break-inside: avoid;
+  }
+
+  .book {
+    transition: opacity 0.4s 0.2s;
+    align-content: center;
+  }
+  .page {
+    float: left;
+    padding-bottom: 10em;
+  }
+  .page:nth-child(odd) {
+    clear: both;
+  }
+  .book {
+    perspective: 250vw;
+    width: 95.3%;
+    padding-bottom: 10em;
+  }
+  .book .pages {
+    position: relative;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    border-radius: 4px;
+    //box-shadow: 0 0 0 1px #e3dfd8;
+  }
+  .book .page {
+    float: none;
+    clear: none;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    transform-origin: 0 0;
+    transition: transform 1.4s;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    user-select: none;
+  }
+  .book .page:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: background 0.7s;
+    z-index: 2;
+  }
+  .book .page:nth-child(even) {
+    pointer-events: all;
+    transform: rotateY(0deg);
+    right: 0;
+    border-radius: 0 4px 4px 0;
+    /*background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.15) 0%,
+      rgba(0, 0, 0, 0) 10%
+    );*/
+  }
+  .book .page:nth-child(even):hover {
+    transform: rotateY(-30deg);
+  }
+  .book .page:nth-child(even):hover:before {
+    background: rgba(0, 0, 0, 0.03);
+  }
+  .book .page:nth-child(even):before {
+    background: rgba(0, 0, 0, 0);
+  }
+  .book .page:nth-child(odd) {
+    pointer-events: none;
+    transform: rotateY(180deg);
+    transform-origin: 100% 0;
+    left: 0;
+    border-radius: 4px 0 0 4px;
+    //border-color: black;
+    /*background-image: linear-gradient(
+      to left,
+      rgba(0, 0, 0, 0.12) 0%,
+      rgba(0, 0, 0, 0) 10%
+    );*/
+  }
+  .book .page:nth-child(odd):before {
+  }
+  .book .page.grabbing {
+    transition: none;
+  }
+  .book .page.flipped:nth-child(even) {
+    pointer-events: none;
+    transform: rotateY(-180deg);
+  }
+  .book .page.flipped:nth-child(even):before {
+    //background: rgba(0, 0, 0, 0.2);
+  }
+  .book .page.flipped:nth-child(odd) {
+    pointer-events: all;
+    transform: rotateY(0deg);
+  }
+  .book .page.flipped:nth-child(odd):hover {
+    transform: rotateY(30deg);
+  }
+  .book .page.flipped:nth-child(odd):hover:before {
+    //background: rgba(0, 0, 0, 0.03);
+  }
+  .book .page.flipped:nth-child(odd):before {
+    //background: rgba(0, 0, 0, 0);
+  }
+  *,
+  .page:nth-child(even) {
+    //background-position: right top;
   }
 `;

@@ -19,12 +19,39 @@ export class SessionView extends LitElement {
   constructor() {
     super();
     this.sessions = getAllSessions();
-    this.bookPages =
-      Math.floor(this.sessions[this.sessions.length - 1].id / 2) + 1;
-    this.selectedBookPage = this.bookPages;
+    console.log(this.sessions);
     this.titles = this.sessions.map((session) => {
       return { title: session.ocDate, page: session.id };
     });
+  }
+
+  updated() {
+    super.updated();
+    var pages = this.renderRoot.querySelectorAll(".page");
+    for (var i = 0; i < pages.length; i++) {
+      var page = pages[i];
+      if (i === 0) {
+        page.classList.add("flipped");
+      }
+      if (i % 2 === 1) {
+        page.style.zIndex = pages.length - i;
+      }
+    }
+
+    for (var i = 0; i < pages.length; i++) {
+      //Or var page = pages[i];
+      pages[i].pageNum = i + 1;
+      pages[i].onclick = function () {
+        if (this.pageNum === 1) {
+        } else if (this.pageNum % 2 === 0) {
+          this.classList.add("flipped");
+          this.nextElementSibling.classList.add("flipped");
+        } else {
+          this.classList.remove("flipped");
+          this.previousElementSibling.classList.remove("flipped");
+        }
+      };
+    }
   }
 
   previousPages() {
@@ -37,61 +64,40 @@ export class SessionView extends LitElement {
 
   render() {
     const itemTemplates = [];
-    itemTemplates.push(html`<div class="phb-black-page"></div>`);
-    // first page - left side - dnding?
-    itemTemplates.push(html`<div
-      class="phb page left-session ${1 !== this.selectedBookPage
-        ? "hidden"
-        : ""}"
-    >
+    //itemTemplates.push(html``);
+    // first page - left side - introduction?
+    itemTemplates.push(html`<div class="phb page">
       <div>
         <session-intro></session-intro>
       </div>
     </div>`);
 
     //first page - right side - table of contents? image?
-    itemTemplates.push(html`<div
-      class="phb page right-session ${1 !== this.selectedBookPage
-        ? "hidden"
-        : ""}"
-    >
+    itemTemplates.push(html`<div class="phb page">
       <div class="toc">
         <session-toc></session-toc>
       </div>
     </div>`);
 
-    for (let i = 0; i <= this.sessions.length + 1; i += 2) {
-      const leftSession = this.sessions[i - 2];
-      const rightSession = this.sessions[i - 1];
-      if (leftSession) {
-        itemTemplates.push(html`<div
-          class="phb page left-session ${Math.floor(leftSession.id / 2) + 2 !==
-          this.selectedBookPage
-            ? "hidden"
-            : ""}"
-        >
+    for (let i = 0; i < this.sessions.length; i++) {
+      const session = this.sessions[i];
+      //const rightSession = this.sessions[i - 1];
+      if (session) {
+        itemTemplates.push(html`<div class="phb page">
           <session-entry
-            id="${leftSession.id}"
-            ocDate="${leftSession.ocDate}"
-            icDate="${leftSession.icDate}"
-            .characters="${leftSession.characters}"
-            .happenings="${leftSession.happenings}"
+            id="${session.id}"
+            ocDate="${session.ocDate}"
+            icDate="${session.icDate}"
+            .characters="${session.characters}"
+            .happenings="${session.happenings}"
           ></session-entry>
           <div class="pageNumber auto"></div>
-          <div class="footnote">
-            Session ${leftSession.id}: ${leftSession.ocDate}
-          </div>
+          <div class="footnote">Session ${session.id}: ${session.ocDate}</div>
         </div>`);
       }
 
-      if (rightSession) {
-        itemTemplates.push(html` <div
-          class="phb page right-session ${Math.floor(rightSession.id / 2) +
-            1 !==
-          this.selectedBookPage
-            ? "hidden"
-            : ""}"
-        >
+      /*if (rightSession) {
+        itemTemplates.push(html` <div class="phb page right-session">
           <session-entry
             id="${rightSession.id}"
             ocDate="${rightSession.ocDate}"
@@ -104,28 +110,15 @@ export class SessionView extends LitElement {
             Session ${rightSession.id}: ${rightSession.ocDate}
           </div>
         </div>`);
-      }
+      }*/
     }
 
     return html`
       <h1>Sessions</h1>
-      <div style="float:left; width:100%">
-        <button
-          @click="${this.previousPages}"
-          ?hidden="${this.selectedBookPage ===
-          Math.floor(this.sessions[0].id / 2) + 1}"
-        >
-          Prev
-        </button>
-        <button
-          @click="${this.nextPages}"
-          ?hidden="${this.selectedBookPage ===
-          Math.floor(this.sessions[this.sessions.length - 1].id / 2) + 1}"
-        >
-          Next
-        </button>
+      <div class="book">
+        <div class="phb-black-page"></div>
+        <div class="pages">${itemTemplates}</div>
       </div>
-      <div class="book">${itemTemplates}</div>
     `;
   }
 }
