@@ -111,9 +111,9 @@ export const sessionViewStyles = css`
 
   .book {
     transition: opacity 0.4s 0.2s;
-    align-content: center;
-    background: rgba(0, 0, 0, 0.75);
-    box-shadow: rgba(0, 0, 0, 0.5) 0 1em 3em;
+    box-shadow: 0.5em 0.5em rgb(144, 12, 63), -0.5em 0.5em rgb(144, 12, 63),
+      0.5em -0.5em rgb(144, 12, 63), -0.5em -0.5em rgb(144, 12, 63);
+    border-radius: 4px;
   }
   .page {
     float: left;
@@ -127,6 +127,7 @@ export const sessionViewStyles = css`
     width: 1632px;
     height: 1056px;
     margin-bottom: 3em;
+    margin-left: 1em;
   }
   .book .pages {
     position: relative;
