@@ -19,7 +19,6 @@ export class SessionView extends LitElement {
   constructor() {
     super();
     this.sessions = getAllSessions();
-    console.log(this.sessions);
     this.titles = this.sessions.map((session) => {
       return { title: session.ocDate, page: session.id };
     });
