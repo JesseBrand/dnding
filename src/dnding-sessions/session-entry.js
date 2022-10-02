@@ -1,45 +1,56 @@
-import {LitElement, html, css} from 'lit';
-import {commaAndList} from '../util.js';
+import { css, html, LitElement } from "lit";
+import { commaAndList } from "../util.js";
+import { sessionEntryStyles } from "./session-entry-styles.js";
 
 export class SessionEntry extends LitElement {
   static get styles() {
-    return css`
-    `;
+    return [
+      sessionEntryStyles,
+      css`
+        .purple-header {
+          color: purple;
+          text-align: center;
+        }
+      `,
+    ];
   }
 
   static get properties() {
     return {
-      id: {type: Number},
-      ocDate: {type: String},
-      icDate: {type: String},
-      characters: {type: Array},
-      happenings: {type: Array},
+      id: { type: Number },
+      ocDate: { type: String },
+      icDate: { type: String },
+      characters: { type: Array },
+      happenings: { type: Array },
     };
   }
 
   constructor() {
     super();
-    console.log(this, this.characters);
   }
 
   render() {
     return html`
-      <div class="session">
-        <h2>Session ${this.id}: ${this.ocDate}</h2>
-        <p>IC Date: ${this.icDate}</p>
-        <p>The party, consisting of ${commaAndList(this.characters)}:
+        <h1>The Title of the Story</h1>
+        <p>The party members</p>
+        <ul>
+          ${this.happenings.map((sHappening) => html`<li>${sHappening};</li>`)}
+        </ul>
+        <div class="column-break"></div>
+
+        <h5 class="purple-header">The Party</h5>
+        <p>${commaAndList(this.characters)}:</p>
+        <blockquote>
+          <h3>Loot</h3>
           <ul>
-            ${this.happenings.map(sHappening => html`<li>${sHappening};</li>`)}
-          </ul>
-        </p>
+            <li>Some sword</li>
+            <li>Some rocks</li>
+            <li>Shiny Metal</li></ul>
+        </blockquote>
       </div>
       <slot></slot>
     `;
   }
-
-  _onClick() {
-    this.count++;
-  }
 }
 
-window.customElements.define('session-entry', SessionEntry);
+window.customElements.define("session-entry", SessionEntry);
