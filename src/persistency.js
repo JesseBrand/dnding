@@ -2,19 +2,19 @@ import {LitElement, html, css} from 'lit';
 
 function fetchAllCharacters() {
   return [
-    {name: 'Sam', xp: 22},
-    {name: 'Castle-8', xp: 22},
-    {name: 'Alaric', xp: 21},
-    {name: 'Nuk / Reddy', xp: 20},
-    {name: 'Horatio ', xp: 19},
-    {name: 'Exilian', xp: 16},
+    {name: 'Sam', xp: 24},
+    {name: 'Castle-8', xp: 23},
+    {name: 'Alaric', xp: 22},
+    {name: 'Horatio ', xp: 21},
+    {name: 'Nuk', xp: 21},
+    {name: 'Exilian', xp: 17},
+    {name: 'Drathuul', xp: 16},
     {name: 'Navani', xp: 15},
     {name: 'John', xp: 15},
-    {name: 'Drathuul', xp: 15},
-    {name: 'Bill', xp: 14},
-    {name: 'Aboouck', xp: 13},
-    {name: 'Paxton', xp: 11},
-    {name: 'Bavon', xp: 11}
+    {name: 'Bill', xp: 15},
+    {name: 'Aboouck', xp: 14},
+    {name: 'Bavon', xp: 13},
+    {name: 'Paxton', xp: 11}
   ]
 }
 
@@ -110,7 +110,41 @@ function fetchAllSessions() {
       'continued into the swamp the next day, finding the temple surrounded by a makeshift stone wall',
       'had Aboouck blow two large holes into the wall and advanced through them, meeting the bullywug king',
       'did not obey the king, leading to a confrontation, caught the king in a black sphere then were surprised by a gigantic toad rising out of the pool',
-      'dealt with the bullywugs and the giant without too much trouble, then beat the king to a pulp'
+      'dealt with the bullywugs and the giant without too much trouble, then beat the king to a pulp',
+      'returned to Granny, handed over the capsule after quite some delaying, got Aboouck\'s life restored, then returned to Ebonwatch'
+    ]),
+    _constructSession(7, '28/9/2022', 'Fifdas 2', ['Alaric', 'Sam', 'Horatio', 'Nuk', 'Aboouck', 'Bill', 'Bavon'], [
+      'tried out Sam\'s newly brewed beer, which was very good!',
+      'discussed on what to do, negotiated about troll heads, then decided to go and aid the lizards in the mine in their struggle against the troglodytes',
+      'saw the blacksmith\'s son delivar a newly crafted metal quarterstaff to Sam',
+      'headed to Anorak Iron Mine, met Ian outside, then spoke to the other miners inside, who were somewhat grumpy and yearned for coffee',
+      'headed into the mine and noticed the wooden platforms around the whirlpool',
+      'met with the lizardfolk who were preparing an assault on the troglodytes, who asked them to clear the area first',
+      'explored around while Horatio enhanced the party, following a shallow river to a small island in a small lake where Sam was ambushed by a giant lizard, which the party fought and slew',
+      'returned to the lizards, but were told to fight an even bigger one',
+      'followed another stream where they were ambushed by 2 black oozes which were quickly cut up into a lot more by Alaric and Nuk before being defeated',
+      'got their non-magical weapons severely damaged by these creatures, but were quick to switch to either magical means or cheap weapons',
+      'followed the stream further to a marble-looking chamber, which turned out to be a giant slime when they entered, sealing the entrance behind them',
+      'were severely battered by the chamber while attacking it on all sides and unleashing some powerful magic before the marble crashed down around them, useless',
+      'found a magical gemstone in the remains, which was identified as a Ioun Stone and was given to Alaric',
+      'returned, only to find the lizardfolk had dragged the dead lizard out towards their lair and were feasting on it',
+      'joined the feast, said goodbye to the lizards and returned to Ebonwatch'
+    ]),
+    _constructSession(7, '28/9/2022', 'Fifdas 2', ['Sam', 'Castle-8', 'Exilian', 'Horatio', 'Drathuul', 'Bavon'], [
+      'spent some time in the inn, deciding what to do; noticed Exilian having trouble with his tab and Castle-8 arriving with a huge amount of metal',
+      'decided to attempt to apprehend Reo Churner, and asked around town for more information, among which the blacksmith',
+      'watched Sam attempt to locate the smith\'s son Ship\'s hammer, only for the spell to not work',
+      'left town and headed south towards Arken Fissure, where they encountered an enraged Reo across the chasm',
+      'engaged in conversation with Reo, hearing about his beef with the Duke and his warnings about evil to the south-east',
+      'attempted to cross the fissure anyway after Reo headed off, with Castle-8 and Bavon falling in',
+      'followed the fissure west to find giant webs, where they were ambushed by some trolls and giant spiders',
+      'taunted the trolls in the fissure but eventually decided not to engage and head south',
+      'followed the road to the Dreadlands, camping in the wastelands along the way',
+      'arrived at the Dreadlands and witnessed a hoard of Gnolls, deciding retreating was the better option, and headed back towards the fissure',
+      'ran into an enraged Reo Churner that would not let them pass, engaging them in combat',
+      'grew more horrified as Reo ingested vial after vial, mutating and growing more arms before their eyes',
+      'eventually subdued him and bound him to take him to Ebonwatch',
+      'returned to the town late at night, visiting the Duke in the morning and collecting the bounty after turning Reo in'
     ])
   ]
 }
