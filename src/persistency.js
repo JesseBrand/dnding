@@ -2,19 +2,20 @@ import {LitElement, html, css} from 'lit';
 
 function fetchAllCharacters() {
   return [
-    {name: 'Sam', xp: 24},
+    {name: 'Sam', xp: 25},
     {name: 'Castle-8', xp: 23},
     {name: 'Alaric', xp: 22},
-    {name: 'Horatio ', xp: 21},
-    {name: 'Nuk', xp: 21},
+    {name: 'Horatio ', xp: 22},
+    {name: 'Nuk', xp: 22},
     {name: 'Exilian', xp: 17},
-    {name: 'Drathuul', xp: 16},
+    {name: 'Drathuul', xp: 17},
     {name: 'Navani', xp: 15},
     {name: 'John', xp: 15},
     {name: 'Bill', xp: 15},
-    {name: 'Aboouck', xp: 14},
-    {name: 'Bavon', xp: 13},
-    {name: 'Paxton', xp: 11}
+    {name: 'Aboouck', xp: 15},
+    {name: 'Bavon', xp: 14},
+    {name: 'Paxton', xp: 13},
+    {name: 'Enphine', xp: 13}
   ]
 }
 
@@ -130,7 +131,7 @@ function fetchAllSessions() {
       'returned, only to find the lizardfolk had dragged the dead lizard out towards their lair and were feasting on it',
       'joined the feast, said goodbye to the lizards and returned to Ebonwatch'
     ]),
-    _constructSession(7, '28/9/2022', 'Fifdas 2', ['Sam', 'Castle-8', 'Exilian', 'Horatio', 'Drathuul', 'Bavon'], [
+    _constructSession(8, '19/10/2022', 'Fifdas 3', ['Sam', 'Castle-8', 'Exilian', 'Horatio', 'Drathuul', 'Bavon'], [
       'spent some time in the inn, deciding what to do; noticed Exilian having trouble with his tab and Castle-8 arriving with a huge amount of metal',
       'decided to attempt to apprehend Reo Churner, and asked around town for more information, among which the blacksmith',
       'watched Sam attempt to locate the smith\'s son Ship\'s hammer, only for the spell to not work',
@@ -145,6 +146,26 @@ function fetchAllSessions() {
       'grew more horrified as Reo ingested vial after vial, mutating and growing more arms before their eyes',
       'eventually subdued him and bound him to take him to Ebonwatch',
       'returned to the town late at night, visiting the Duke in the morning and collecting the bounty after turning Reo in'
+    ]),
+    _constructSession(9, '26/10/2022', 'Fifdas 4', ['Sam', 'Horatio', 'Drathuul', 'Nuk', 'Aboouck', 'Paxton', 'Bavon', 'Enphine'], [
+      'met at the inn when Nuk returned from Sootwall with Master Billowgrin and an unknown wizard lady named Enphine, in search of money for her research',
+      'understood from Master Billowgrin that Sootwall was under threat from Manticores',
+      'decided on aiding the gnomes and prepared to depart but negotiated for a breathing apparatus for use in the mines, while Alaric and Castle-8 signalled they had other business to attend to',
+      'travelled to Sootwall with Master Billowgrin who took them inside through a secret magic circle',
+      'were explained the situation with the manticores on the cliffside by the gnomes, then were quickly sent on their way, with the promise of magic items waiting for them upon completion',
+      'explored the cliffsides and found a way down, Bavon \'climbing\' down by himself while Sam scouted around',
+      'were set upon by two manticores, who were easily dispatched',
+      'scouted further and found a nesting area, preparing to attack with a few large stones, among other things',
+      'assaulted the manticores down a steep cliff, but were surprised to see a huge manticore lording over the pride',
+      'had Paxton climb down hasted while Nuk created a storm sphere to cause confusion and Sam pelted the manticores from above',
+      'had Horatio and Drathuul fall down a level due to a rope that appeared to not have been tied too well after all',
+      'noticed the huge manticore retreat very fast, but Sam catching up with it, slaying it, then saw it rise again just to be killed by an arrow from Bavon',
+      'recovered, looted the nest and manticores and their eggs, then heard a large impact with glass breaking, noticing it came from the observatory',
+      'hurried back to the observatory to encounter panicked gnomes, quickly sent them upstairs, while Sam took a peak through the hole from the outside',
+      'headed upstairs and ran into a huge manticore fesating on some dead gnomes, covered in broken potions',
+      'prepared well then attacked the beast, making use of the ballistae scattered around the room',
+      'saw Aboouck cause Bavon and Sam to grow in size until Bavon could pick up a ballista by himself and shoot the manticore repeatedly until it went down, but not before it took down Paxton with it',
+      'returned to the gnomes for their reward; again picking from several barrels of magic items, then returned to Ebonwatch'
     ])
   ]
 }
