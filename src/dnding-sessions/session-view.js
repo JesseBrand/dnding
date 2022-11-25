@@ -16,7 +16,7 @@ export class SessionView extends LitElement {
   render() {
     return html`
       <h1>Sessions</h1>
-      ${this.sessions.map(oSession => html`<session-entry id="${oSession.id}" ocDate="${oSession.ocDate}" icDate="${oSession.icDate}" .characters=${oSession.characters} .happenings=${oSession.happenings}></session-entry>`)}
+      ${this.sessions.map(oSession => html`<session-entry id="${oSession.id}" ocDate="${oSession.ocDate}" icDate="${oSession.icDate}" .characters=${oSession.characters} .happenings=${oSession.happenings} .loot=${oSession.loot} .repercussions=${oSession.repercussions}></session-entry>`)}
     `;
   }
 
