@@ -2,20 +2,20 @@ import {LitElement, html, css} from 'lit';
 
 function fetchAllCharacters() {
   return [
-    {name: 'Sam', xp: 26},
-    {name: 'Castle-8', xp: 24},
-    {name: 'Nuk', xp: 23},
+    {name: 'Sam', xp: 27},
+    {name: 'Castle-8', xp: 25},
+    {name: 'Nuk', xp: 24},
+    {name: 'Horatio ', xp: 23},
     {name: 'Alaric', xp: 22},
-    {name: 'Horatio ', xp: 22},
     {name: 'Drathuul', xp: 18},
-    {name: 'Exilian', xp: 17},
-    {name: 'Aboouck', xp: 16},
-    {name: 'Bill', xp: 15},
+    {name: 'Exilian', xp: 18},
+    {name: 'Aboouck', xp: 17},
+    {name: 'Bill', xp: 16},
     {name: 'John', xp: 15},
     {name: 'Navani', xp: 15},
-    {name: 'Bavon', xp: 14},
-    {name: 'Enphine', xp: 14},
-    {name: 'Paxton', xp: 14},
+    {name: 'Bavon', xp: 15},
+    {name: 'Enphine', xp: 15},
+    {name: 'Paxton', xp: 15},
     {name: 'Freya', xp: 13}
   ]
 }
@@ -244,12 +244,20 @@ function fetchAllSessions() {
       'were helped back up by the dragons who were very thankful for their effort and expressed their condoleances for Drathuul\'s death; they offered to help his essence, being one of their kin, to return to the world',
       'were granted a reward, left Drathuul\'s body and belongings with Essephy and Nivrath and returned to Ebonwatch, knowing the quarry was open for production once more',
     ], [
-      'a green-pink marbled rock',
+      'an Ioun Stone of Insight (Wisdom)',
       'a dragon-blessed glaive'
     ], [
       'Drathuul was annihilated by a shadow beholder',
       'An agreement was struck with the dragons inhabiting Gamwater Quarry',
       'Gamwater Quarry became available as a location'
+    ]),
+    _constructSession(10, 'Prove your Mettle', '7/12/2022', 'Sidas 2', ['Sam', 'Castle-8', 'Exilian', 'Horatio', 'Nuk', 'Aboouck', 'Paxton', 'Bill', 'Bavon', 'Enphine'], [
+      'TODO'
+    ], [
+      'an interesting heavy stone'
+    ], [
+      'Sir Dozak set out on his expedition, recruiting the party',
+      'An ancient ruin in the Royal Woodlands became available as a location as a location'
     ])
   ]
 }
