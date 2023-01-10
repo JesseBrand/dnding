@@ -2,20 +2,20 @@ import {LitElement, html, css} from 'lit';
 
 function fetchAllCharacters() {
   return [
-    {name: 'Sam', xp: 27},
-    {name: 'Castle-8', xp: 25},
+    {name: 'Sam', xp: 28},
+    {name: 'Castle-8', xp: 26},
     {name: 'Nuk', xp: 24},
-    {name: 'Horatio ', xp: 23},
+    {name: 'Horatio ', xp: 24},
     {name: 'Alaric', xp: 22},
+    {name: 'Exilian', xp: 19},
     {name: 'Drathuul', xp: 18},
-    {name: 'Exilian', xp: 18},
     {name: 'Aboouck', xp: 17},
-    {name: 'Bill', xp: 16},
+    {name: 'Bill', xp: 17},
+    {name: 'Bavon', xp: 16},
+    {name: 'Paxton', xp: 16},
     {name: 'John', xp: 15},
     {name: 'Navani', xp: 15},
-    {name: 'Bavon', xp: 15},
     {name: 'Enphine', xp: 15},
-    {name: 'Paxton', xp: 15},
     {name: 'Freya', xp: 13}
   ]
 }
@@ -251,13 +251,47 @@ function fetchAllSessions() {
       'An agreement was struck with the dragons inhabiting Gamwater Quarry',
       'Gamwater Quarry became available as a location'
     ]),
-    _constructSession(10, 'Prove your Mettle', '7/12/2022', 'Sidas 2', ['Sam', 'Castle-8', 'Exilian', 'Horatio', 'Nuk', 'Aboouck', 'Paxton', 'Bill', 'Bavon', 'Enphine'], [
-      'TODO'
+    _constructSession(11, 'Prove your Worth', '7/12/2022', 'Sidas 2', ['Sam', 'Castle-8', 'Exilian', 'Horatio', 'Nuk', 'Aboouck', 'Paxton', 'Bill', 'Bavon', 'Enphine'], [
+      'discussed current affairs in the tavern and noticd Bavon was not getting served anymore',
+      'were approached by Sir Dozak the Magnificent who told Sir Sam his expedition was ready to go',
+      'left with Sir Dozak after having been promised treasure and set off towards Hornwood',
+      'reached Hornwood where Bavon attempted to catch a bird, which after dramatically failing ended up amazingly smooth',
+      'headed into the  woods following Sir Dozak\'s lead and reached a blocked cave entrance',
+      'had Aboouck and Bavon volunteer to place explosives at the entrance, after which Horatio detonated them',
+      'noticed elven runes above the entrance as Exilian quickly headed down, followed by the others, including Sir Dozak and his bodyguards',
+      'reached a large overgrown room with a murky pool in the middle and a glimmering gate to the right, then entered quickly',
+      'were set upon by living bushes that surprised Exilian and the others, as they struggled to catch up',
+      'dealt with the menaces, Bavon getting injured and Exilian ingesting some of the murky water',
+      'noticed they were not feeling too well, a few party members gaining exhaustion',
+      'explored the room and examined the portal; after Paxton was assigned volunteer by Sir Dozak to go through but did not comply, a bodyguard attempted to push Enhpine inside, who resisted; Horatio proceeded to teleport him inside the gate, which apparently did not work',
+      'proceeded further into the ruin, approaching a crossroads where the party split while Nuk\'s mage hand opened a trapped chest that did not contain anything; Bavon took the mechanism with him',
+      'had Paxton, Exilian and Bill reach a large overgrown room with an overgrown chasm and several bells hanging from the wall, then returned to the party, but not before Bill could not resist the urge to ring a bell',
+      'had Sir Dozak abandon the split-off members and usher the rest into another corridor, that led to a well at the end of a tunnel',
+      'had Castle-8 with Aboouck on his shoulder and Sam approach the well, only for tentacles to shoot out from the well and grab them',
+      'saw Aboouck casting haste on two allies, only for his wild magic to trigger and create a puddle of grease at the most inopportune location',
+      'saw Sam and Castle-8, followed by Horatio, be drawn into the well; Bavon then growing in size before he was drawn into the well too, effectively sealing the stone tube',
+      'saw the monster do a lot of damage biting Sam and Horatio when Exilian pulled a trick from his sleeve and dropped a bead of force into the pit, which landed and expanded into a sphere above Castle-8, Sam and Horatio but below Bavon',
+      'cut the tentacle grabbing Bavon, then pushed the expanded sphere out of the well, Bavon - still enlarged - becoming squashed between the sphere and the ceiling',
+      'pushed the sphere out of the way, after which the creature was dealt with swiftly',
+      'searched the pit while down there, Sam pocketing a heavy magical stone',
+      'decided to call it a day, went back outside where Sir Dozak and his guards started setting up a camp, where some of the party remained as the rest returned to Ebonwatch'
     ], [
       'an interesting heavy stone'
     ], [
       'Sir Dozak set out on his expedition, recruiting the party',
-      'An ancient ruin in the Royal Woodlands became available as a location as a location'
+      'An ancient ruin in the Royal Woodlands became available as a location'
+    ]),
+    _constructSession(12, 'Rebellion', '4/1/2023', 'Sidas 3', ['Sam', 'Castle-8', 'Exilian', 'Horatio', 'Paxton', 'Bill', 'Bavon'], [
+      'TODO'
+    ], [
+      'a heavy, small chest',
+      'an unidentified scroll',
+      'a ring engraved with fishes',
+      'a muddy potion',
+      '4 arrows'
+    ], [
+      'The expedition into the ancient ruin in the Royal Woodlands proceeded slowly', 
+      'Bavon has earned the ire of Sir Dozak '
     ])
   ]
 }
@@ -265,14 +299,14 @@ function fetchAllSessions() {
 function _constructSession(iId, sName, sOcDate, sIcDate, aCharacters, aHappenings, aLoot, aRepercussions) {
   return {
     'id': iId,
-    'name': sName,
+    'sessionName': sName,
     'ocDate': sOcDate,
     'icDate': sIcDate,
     'characters': aCharacters,
     'happenings': aHappenings,
     'loot': aLoot,
     'repercussions': aRepercussions
-  }
+  };
 }
 
 export {fetchAllCharacters, fetchAllSessions};

@@ -10,7 +10,7 @@ export class SessionEntry extends LitElement {
   static get properties() {    
     return {
       id: {type: Number},
-      name: {type: String},
+      sessionName: {type: String},
       ocDate: {type: String},
       icDate: {type: String},
       characters: {type: Array},
@@ -28,7 +28,7 @@ export class SessionEntry extends LitElement {
   render() {
     return html`
       <div class="session">
-        <h2>Session ${this.id}: ${this.name} (${this.ocDate})</h2>
+        <h2>Session ${this.id}: ${this.sessionName} (${this.ocDate})</h2>
         <p>IC Date: ${this.icDate}</p>
         <p>The party, consisting of ${commaAndList(this.characters)}:
           <ul>
