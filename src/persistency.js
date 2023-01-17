@@ -282,7 +282,24 @@ function fetchAllSessions() {
       'An ancient ruin in the Royal Woodlands became available as a location'
     ]),
     _constructSession(12, 'Rebellion', '4/1/2023', 'Sidas 3', ['Sam', 'Castle-8', 'Exilian', 'Horatio', 'Paxton', 'Bill', 'Bavon'], [
-      'TODO'
+      'met up in the tavern where Sam made an announcement about the Duke paying them to safeguard the quarry',
+      'quickly departed to join Sir Dozak at the camp in the Royal Woodlands, then headed back into the ruins together',
+      'saw Exillian examine the pool of water once more while Sam and Bavon explored the previously uncovered tunnels once more, much to the ire of Sir Dozak',
+      'headed into the room with the big bells, where they noticed a gnoll stuck in the high growth inside the great chasm dividing the chamber',
+      'approached the gnoll only to hear him utter something about the dark coming, before the growth turned on them',
+      'formed a line with Paxton up front with his glaive while Castle-8, Bill and Dozak\'s troops held back the tentacles, while the others attacked the plant creature from a distance',
+      'beat the plant creature then regrouped, noticed Bavon try and pickpocket Sir Dozak, which everyone was alarmed to when a loud alarm went off',
+      'witnessed Sir Dozak go down hard on Bavon, pointing him at his responsibilities and addressing Sam to keep his employee under control',
+      'had Exillian continue and run into the next room while all this happened, trying to cross some slippery stepping stones but failing and falling into a crevice, then be promptly assaulted and swallowed by a giant plant tentacle creature, unable to see or breathe',
+      'ran forwards to aid Exillian, Sir Dozak instructing Bavon to stay behind and wait and have one of his men guard Bavon',
+      'saw Paxton and Bill engage another plant creature that had crawled up, before the creature swallowed Paxton whole',
+      'turned their attention to these two plant creatures as Exillian was forgotten and Bill was also swallowed for a short while',
+      'had Horatio create a puddle of grease, not really helping the situation, as the plant creatures were engaged one by one, with the help of Sir Dozak and one of his man, who went down in the onslaught',
+      'did not pay attention how Bavon disobeyed his guard, engaged the plant creatures from a distance, then got in a fight with the guard, killed him then hid his body down in the trench',
+      'finally took care of the plants then got into another shouting match with Sir Dozak who was now furious at Bavon; Bavon saved his hide lying about the guard who supposedly fled, then Exillian showed how pickpocketing should really be done if they wanted to',
+      'distracted Dozak enough for Sam and Paxton to search the trench for treasure, finding a small heavy chest that did catch Sir Dozak\'s eye, but then climbed out on the other side and opened it secretly, removing a couple of items then closing it back up again',
+      'evaluated the next room, which was opposite of the crevice where the first thorny plant was fought, but decided to return to camp to rest and recuperate',
+      'exited the ruins while Sir Dozak asked for Sam\'s input on what to do with Bavon and whether or not he could be trusted... and kept alive'
     ], [
       'a heavy, small chest',
       'an unidentified scroll',
