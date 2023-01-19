@@ -2,21 +2,22 @@ import {LitElement, html, css} from 'lit';
 
 function fetchAllCharacters() {
   return [
-    {name: 'Sam', xp: 28},
-    {name: 'Castle-8', xp: 26},
-    {name: 'Nuk', xp: 24},
+    {name: 'Sam', xp: 29},
+    {name: 'Castle-8', xp: 27},
+    {name: 'Nuk', xp: 25},
     {name: 'Horatio ', xp: 24},
     {name: 'Alaric', xp: 22},
     {name: 'Exilian', xp: 19},
     {name: 'Drathuul', xp: 18},
+    {name: 'Bill', xp: 18},
     {name: 'Aboouck', xp: 17},
-    {name: 'Bill', xp: 17},
+    {name: 'Paxton', xp: 17},
     {name: 'Bavon', xp: 16},
-    {name: 'Paxton', xp: 16},
+    {name: 'Enphine', xp: 16},
     {name: 'John', xp: 15},
     {name: 'Navani', xp: 15},
-    {name: 'Enphine', xp: 15},
-    {name: 'Freya', xp: 13}
+    {name: 'Sir Dixon', xp: 15},
+    {name: 'Freya', xp: 14}
   ]
 }
 
@@ -284,31 +285,69 @@ function fetchAllSessions() {
     _constructSession(12, 'Rebellion', '4/1/2023', 'Sidas 3', ['Sam', 'Castle-8', 'Exilian', 'Horatio', 'Paxton', 'Bill', 'Bavon'], [
       'met up in the tavern where Sam made an announcement about the Duke paying them to safeguard the quarry',
       'quickly departed to join Sir Dozak at the camp in the Royal Woodlands, then headed back into the ruins together',
-      'saw Exillian examine the pool of water once more while Sam and Bavon explored the previously uncovered tunnels once more, much to the ire of Sir Dozak',
+      'saw Bavon and Exilian examine the pool of water once more as Bavon threw multiple gold coins into it after which Sam and Bavon explored the previously uncovered tunnels once more, much to the ire of Sir Dozak',
       'headed into the room with the big bells, where they noticed a gnoll stuck in the high growth inside the great chasm dividing the chamber',
       'approached the gnoll only to hear him utter something about the dark coming, before the growth turned on them',
       'formed a line with Paxton up front with his glaive while Castle-8, Bill and Dozak\'s troops held back the tentacles, while the others attacked the plant creature from a distance',
-      'beat the plant creature then regrouped, noticed Bavon try and pickpocket Sir Dozak, which everyone was alarmed to when a loud alarm went off',
+      'beat the plant creature then regrouped, noticed Bavon try and pickpocket Sir Dozak, which everyone was alarmed to when a loud alarm went off, then had Exillian show how pickpocketing should really be done if they intended to using his invisible mage hand',
       'witnessed Sir Dozak go down hard on Bavon, pointing him at his responsibilities and addressing Sam to keep his employee under control',
       'had Exillian continue and run into the next room while all this happened, trying to cross some slippery stepping stones but failing and falling into a crevice, then be promptly assaulted and swallowed by a giant plant tentacle creature, unable to see or breathe',
       'ran forwards to aid Exillian, Sir Dozak instructing Bavon to stay behind and wait and have one of his men guard Bavon',
       'saw Paxton and Bill engage another plant creature that had crawled up, before the creature swallowed Paxton whole',
       'turned their attention to these two plant creatures as Exillian was forgotten and Bill was also swallowed for a short while',
       'had Horatio create a puddle of grease, not really helping the situation, as the plant creatures were engaged one by one, with the help of Sir Dozak and one of his man, who went down in the onslaught',
-      'did not pay attention how Bavon disobeyed his guard, engaged the plant creatures from a distance, then got in a fight with the guard, killed him then hid his body down in the trench',
-      'finally took care of the plants then got into another shouting match with Sir Dozak who was now furious at Bavon; Bavon saved his hide lying about the guard who supposedly fled, then Exillian showed how pickpocketing should really be done if they wanted to',
-      'distracted Dozak enough for Sam and Paxton to search the trench for treasure, finding a small heavy chest that did catch Sir Dozak\'s eye, but then climbed out on the other side and opened it secretly, removing a couple of items then closing it back up again',
+      'did not pay attention how Bavon disobeyed his guard, engaged the plant creatures from a distance, then got in a fight with the guard, killed him then hid his body down in the trench, except for Horatio noticing',
+      'finally took care of the plants then got into another shouting match with Sir Dozak who was now furious at Bavon; Bavon saved his hide lying about the guard who supposedly fled',
+      'distracted Dozak enough for Sam, Exilian and Paxton to search the trench for treasure, finding a small heavy chest that did catch Sir Dozak\'s eye, but then climbed out on the other side and opened it secretly, removing a couple of items then closing it back up again',
       'evaluated the next room, which was opposite of the crevice where the first thorny plant was fought, but decided to return to camp to rest and recuperate',
       'exited the ruins while Sir Dozak asked for Sam\'s input on what to do with Bavon and whether or not he could be trusted... and kept alive'
     ], [
-      'a heavy, small chest',
-      'an unidentified scroll',
-      'a ring engraved with fishes',
-      'a muddy potion',
+      'A heavy, small chest',
+      '3 spell scrolls: Disguise Self (lvl1), Misty Step (lvl2) and Meld Into Stone (lvl3)',
+      'A ring engraved with fishes',
+      'A muddy potion',
       '4 arrows'
     ], [
       'The expedition into the ancient ruin in the Royal Woodlands proceeded slowly', 
       'Bavon has earned the ire of Sir Dozak '
+    ]),
+    _constructSession(13, 'Another Sir', '18/1/2023', 'Sidas 4', ['Sam', 'Castle-8', 'Nuk', 'Paxton', 'Bill', 'Enphine', 'Sir Dixon'], [
+      'saw Enphine come into the tavern somewhat excited and distressed at the same time, with news from the observatory; she tols the party the gnomes had fixed the telescope and are able to look under the shard using some mirror construction; it unfortunately turned the gnome watching mad',
+      'shared news by Sam and Paxton about some shadowy figures appearing around the quarry and attacking shipments',
+      'noticed an old man in a brown robe walk in and ask Florellius for Sir Dozak, who directed them to the party where he introduced himself als Sir Dixon Fire and explained his goals of aiding Sir Dozak and cleansing the shard of evil',
+      'decided their priority was to protect the quarry, but Nuk offered to take Sir Dixon along and bring him to Sir Dozak afterwards',
+      'left and set out towards Gamwater Quarry only to find Bavon chained up mining stone; after becoming upset Sam and Bavon explained that this was for the better',
+      'went into the quarry and encountered Nivrath and Essephy once once, who gave some details about the shadow creatures; they explained how they could only be harmed in sunlight',
+      'concluded they could not face the creatures, then set out to find Sir Dozak, but not before informing the quarry foreman to only vacate the quarry during the night, who in turn requested more security around dusk',
+      'travelled through Ebonwatch and Hornwood to Sir Dozak\'s Forward Camp where he enlightend the party to the contents of the chest, which were 3 scrolls and 4 arrows, who they were quickly able to identify as Disguise Self, Misty Step and Meld into Stone, which they agreed to sell',
+      'entered the ruins alongside Sir Dozak and his men, then proceeded back to the large chamber with the crevice as Enphine created away across the stepping stones by creating a bridge of mud with her spells',
+      'attempted to open the big door through sheer strength which was utterly unsuccesful, then opened the smaller door with such strength that Castle-8 flew through and landed at the bottom of the stairs',
+      'explored a small room with a nice old carpet, an engraving of a splendid bow and a flower pot with a green plant growing out of it',
+      'had Bill investigate the plant, which caressed him, instantly creating a bond with him after which he took it along',
+      'saw Sir Dixon perform a silly little dance which supposedly allowed him to see magic items, seeing the magic of the flower pot for an instance before Bill stored it, but also identifying the bow on the wall as magical',
+      'attempted to ring the bells in the main chamber simultaneously when they heard the movement of stone over stone',
+      'saw Paxton notice a great demon emerge from the other side of the chamber, sprout a pair of wings, cross the gap then engage them in combat',
+      'noticed Paxton communicate with the demon who gave him an evil smile, as Castle-8 and Bill were grabbed by great Picers while the party engaged it, Sir Dozak joining the effort but his men merely lighting the situation with their torches',
+      'saw Sir Dixon changed into a Brown Bear during the fight while they slew the demon, who upon his death made mental contact with Paxton, who was left somewhat shocked',
+      'headed out to the room where the demon came from and explored it to find many books, chests, supplies and potions lost beyond recovery, but did find a green elvish cloak in remarkable good shape while Nuk was able to salvage an Alchemy Set and Bill recovered some potion bottles',
+      'found a hole in the wall which Sir Dixon explored as a little spider, only to return back to the first main hall where they encountered the first portal',
+      'returned to the chasm room and attempted to open the main doors through sounding the bells in the correct order; after a lot of attempts Sam\'s first suggestion proved to be right and the double doors opened',
+      'emerged into a huge tall room stutted by pillars and carefully went inside as Sir Dixon started another silly dance',
+      'discovered a huge white dragon statue while Castle-8 approached a huge dead tree which he attempted to light on fire, only to have it emerge to be a living, angry tree creature',
+      'engaged the tree together, throwing fireballs, smites, daggers and heavy punches while the creature performed sweeping attacks, throwing the party backwards and bringing Sir William the Torchbearer down, but ultimately could not withstand the sheer might of Enphine\'s fireballs',
+      'noticed a portal behind the creature light up, then proceeded to investigate it, Bill and Castle-8 discovering it was possible to travel between this portal and the one at the entrance',
+      'discovered a stone shaft down into the ground, which was filled with rubble, when Sir Dozak indicated the next step in the expedition would involve excavating it',
+      'noticed a faint magical aura within the dragon statue before leaving the ruins and returning to Ebonwatch'
+    ], [
+      'a splendid green elvish cloak',
+      'an alchemy set',
+      'a sentient plant',
+      'a nice-looking but ancient rug'
+    ], [
+      'Paxton had a strange encounter with a large demon',
+      'The expedition into the ancient ruin in the Royal Woodlands came to a hold as a deep shaft was uncovered that needs to be excavated', 
+      'The Portals in the Elven Ruins were activated',
+      'The party learned that some way of providing daylight will be required to face the large shadow creature'
     ])
   ]
 }
