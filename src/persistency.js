@@ -2,22 +2,22 @@ import {LitElement, html, css} from 'lit';
 
 function fetchAllCharacters() {
   return [
-    {name: 'Sam', xp: 29},
+    {name: 'Sam', xp: 30},
     {name: 'Castle-8', xp: 27},
     {name: 'Nuk', xp: 25},
-    {name: 'Horatio ', xp: 24},
+    {name: 'Horatio ', xp: 25},
     {name: 'Alaric', xp: 22},
     {name: 'Exilian', xp: 19},
+    {name: 'Bill', xp: 19},
     {name: 'Drathuul', xp: 18},
-    {name: 'Bill', xp: 18},
+    {name: 'Paxton', xp: 18},
     {name: 'Aboouck', xp: 17},
-    {name: 'Paxton', xp: 17},
+    {name: 'Enphine', xp: 17},
     {name: 'Bavon', xp: 16},
-    {name: 'Enphine', xp: 16},
+    {name: 'Sir Dixon', xp: 16},
     {name: 'John', xp: 15},
     {name: 'Navani', xp: 15},
-    {name: 'Sir Dixon', xp: 15},
-    {name: 'Freya', xp: 14}
+    {name: 'Freya', xp: 15}
   ]
 }
 
@@ -348,7 +348,50 @@ function fetchAllSessions() {
       'The expedition into the ancient ruin in the Royal Woodlands came to a hold as a deep shaft was uncovered that needs to be excavated', 
       'The Portals in the Elven Ruins were activated',
       'The party learned that some way of providing daylight will be required to face the large shadow creature'
-    ])
+    ]),
+    _constructSession(14, 'The Trapped Lair', '1/2/2023', 'Sepdas 1', ['Sam', 'Horatio', 'Paxton', 'Bill', 'Enphine', 'Sir Dixon'], [
+      'met up in the inn, missing Horatio, Enphine and Nuk, when Paxton told them that the body of a child was found somewhere outside town which looked as if his life essence was drained, the body looked shriveled; then reported it to the Chamberlain',
+      'noticed Horatio and Enphine walking in the inn, explaining that Enphine and Nuk had looked through the telescope, Nuk lost his mind doing so but Enphine was decided she was better off by not looking into it for too long',
+      'had Enphine explain that she saw some kind of force field covering the dark bottom of the shard which had a great many creatures of various sizes working and digging in there',
+      'asked Enphine many questionsabout these creatures and informed Chaimberlain Gerard about the issue, after which he left to report it to the Duke himself',
+      'looked on as Sir Dixon presented a map of a couple of the different shards which the empire had expanded to, telling them about the shard Asholas which was destroyed by a demon army, and that it could also happen upon this shard',
+      'had Sam mention the idea of having the Lizardfolk help them in this battle, to which Sir Ginimus was surprised as his only history with them was being ambushed and having several of his men killed',
+      'decided on the loot from the Elven Ruin and decided to sell pretty much all of it and split the money, Enphine still considering paying some of the scrolls',
+      'headed out towards the Slumbering Hills to aid the lizards in their need to fight the amphibian creatures they faced before',
+      'came by Wheldrake Fortress, then continued to the Mine without effort, meeting Ian out front who asked for coffee and mentioned their bunny friend',
+      'reached the poisonous fog, where Sir Dixon gave Sam an air bubble around his head in order to scout ahead, where he found a barrier before returning with his findings',
+      'cleared out a lot of the poisonous fog as Enphine cast her gust the Sir Dixon used Gust of Wind to clear out most of the tunnel, who got poisoned and lost half his health before listening to the groovy tunes of Horatio',
+      'went into the tunnel, but faced a last barier of thick poisonous fog that would not clear it, Sam went in and they heard a fuse being lit before Sam came out shout "RUN!"',
+      'were surprised by a massive explosion as Sam had detonated a horn of gunpowder when half the cave started to tremble and rocks started to fall',
+      'watched the gas clear out and the force field gone and proceeded along the stream to a bridge which led to two tunnels as the rivier was blocked off by debris',
+      'investigated several tunnels, discovering most of them blocked with only one actually leading to an interisteing room, while one other ended in a weird flat surface which they could not find anything special about',
+      'continued into a larger room with a large pile of gold in the middle where Bill spotted loose rocks among the ceiling',
+      'noticed two large slabs of rock where Sam scouted around',
+      'saw Bill approach the gold which as he touched it turned to a brown moldy dust that quickly spread through the room, poisoning Enphine as Sam was protected by his air bubble, after which Enphine was helped out by Horatio',
+      'had Sam explore further, discovering a passage down and some ropes leading from back of the stone slabs',
+      'attempted to push one of the slabs aside, with only Paxton really trying and the rest flailing about',
+      'remembered Sam had a crowbar, which Paxton used to lift a slab with the help others, which eventually succeeded',
+      'followed the passage down, leading to spiral staircase down to an old, very wet ruin',
+      'entered the room with Sam in front as a net dropped down on him which he was easily able to avoid, before they were set upon by several of the amphibian Troglodytes who remained hidden until now',
+      'saw Bill run north dodging another net effortlessly, dealing some severe damage to several Troglodytes he spotted',
+      'noticed more and more creatures pouring out of the side chambers before hearing some loud roars as several huge Troglodytes came charging from the rooms and descended upon the party',
+      'wavered as they were assaulted from all sides, Bill quickly going down to the onslaught of the monsters, which also smelled extremely bad',
+      'kept saving Bill as he kept bleeding out, each time attacked by the creatures once more, going down three times before the battle was done',
+      'saw Enphine cast one fireball after the other from the stairs, dealing massive damage, while Sam employed stunning strikes, Sir Dixon changed into a bear and Paxton held his ground at Bill, while grooving on the Horatio\' Tunes',
+      'searched the rooms after the battle was over, finding a wand with a blue flare on its end, which Horatio identified as a Wand of Magic Missile',
+      'scouted a bit further into the next room, finding a set of stairs leading down that were entirely flooded',
+      'turned back and decided to return to the Lizardfolk, cutting up some of the bigger Troglodytes and bringing some meat for the Lizardfolk, who were quite pleased',
+      'discussed the progress with the Lizardfolk and asked them for help with the demons; they insisted they needed to deal with the Troglodytes first and needed the party to find a way to continue through the water',
+      'were told by the Lizardfolk they were disappointed in the time it took the party to progress, but rewarded them with a small amulet they found',
+      'returned to Ebonwatch to rest'
+    ], [
+      'A Wand of Magic Missile',
+      'A small amulet with many tiny mechanical components'
+    ], [
+      'The party cleared a way into the troglodyte lair',
+      'The lizardfolk were happy with the party\'s progress and indicated they would need to find a way to breathe underwater for the next stage of the assault',
+      'The lizardfolk were made aware of the demon threat and were asked to help'
+    ]),
   ]
 }
 
