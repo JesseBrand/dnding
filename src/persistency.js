@@ -2,19 +2,21 @@ import {LitElement, html, css} from 'lit';
 
 function fetchAllCharacters() {
   return [
-    {name: 'Sam', xp: 30},
-    {name: 'Castle-8', xp: 27},
+    {name: 'Sam', xp: 31},
+    {name: 'Castle-8', xp: 28},
+    {name: 'Horatio ', xp: 26},
     {name: 'Nuk', xp: 25},
-    {name: 'Horatio ', xp: 25},
-    {name: 'Alaric', xp: 22},
-    {name: 'Exilian', xp: 19},
+    {name: 'Alaric', xp: 23},
+    {name: 'Ru', xp: 21},
+    {name: 'Exilian', xp: 20},
     {name: 'Bill', xp: 19},
+    {name: 'Paxton', xp: 19},
     {name: 'Drathuul', xp: 18},
-    {name: 'Paxton', xp: 18},
+    {name: 'Enphine', xp: 18},
     {name: 'Aboouck', xp: 17},
-    {name: 'Enphine', xp: 17},
+    {name: 'Sir Dixon', xp: 17},
     {name: 'Bavon', xp: 16},
-    {name: 'Sir Dixon', xp: 16},
+    {name: 'Girard', xp: 16},
     {name: 'John', xp: 15},
     {name: 'Navani', xp: 15},
     {name: 'Freya', xp: 15}
@@ -391,6 +393,41 @@ function fetchAllSessions() {
       'The party cleared a way into the troglodyte lair',
       'The lizardfolk were happy with the party\'s progress and indicated they would need to find a way to breathe underwater for the next stage of the assault',
       'The lizardfolk were made aware of the demon threat and were asked to help'
+    ]),
+    _constructSession(15, 'The Jungle Bridge', '15/2/2023', 'Sepdas 2', ['Alaric', 'Sam', 'Castle-8', 'Exilian', 'Horatio', 'Paxton', 'Enphine', 'Sir Dixon', 'Girard', 'Ru'], [
+      'met up in the the inn when Sam and Dixon reported on their meeting with the Duke, about demons overrunning the shard and that they could all be in real trouble being outnumbered, recommending the party members focus their activities on preparing against this invasion',
+      'were disturbed by a rumble and shouting guards outside the tavern, having Sir Dixon, Sam, Enphine, Horatio and Alaric go outside to check it out',
+      'noticed a creature/person outside of the gate with a mask on, claiming he is unable to remove it, Sir Dixon vaguely recognising the voice and asking him about it, then being recognised himself for his involvement on Asholas along with Sir Dozak',
+      'had the creature identify himself as Ru after which Sir Dixon remembers him, but the guards still refusing to stand down, they mentioned someone like Sir Dozak would have to issue such a command',
+      'had Horatio cast vortex warp on Ru and teleport him into the inn, leaving the guards startled and reaching for their weapons, but giving up quickly',
+      'were approached by another stranger introducing himself to the 4 adventures at the gate as Girard de Kosigan, a holy priest from the newly built church just outside Ebonwatch',
+      'got to know Girard who mentioned he was looking for adventures and indicated he thought the party needed a healer and that he could supply this added value',
+      'reconvened in the tavern and spoke with Ru and Girard, who mentioned he was from the Shard of Addiarus and gave a round of Boatliver Ale to the entire Inn',
+      'made plans where to go next, mentioned the quarry as Girard claimed he could cast daylight which would help in the fight with the shadow monsters',
+      'listened toDixon mention that a way to communicate with Tuletus so that they could call for reinforcements would be of great value but might take a while, so the sooner they starter on it the greater the chance that they would arrive on time',
+      'decided to attempt to recover the escaped slaves to find a way to communicate with other shards, then left for Hornwood and decided to show off their abilities on ways to cross the river, Exilian getting in a lot of trouble before realizing he could put his ring on',
+      'headed towards Sir Dozak\'s Camp quietly and explained to him they were looking for slaves, having Lambert join them to show them where they were spotted',
+      'headed further into the woods and came accross the sleeping Giant some of them encountered before, but decided to avoid it for now', 
+      'noticed the forest into a more dense jungle which became increasingly more difficult to move through, then found a hilltop which Sam scouted out, noticing a very long bridge through the canopy',
+      'left Lambert behind and climbed the hill, then embarked upon the bridge which seemed to stretch on for a long while, crossing carefully',
+      'noticed a cricket-like man run towards them as two griffons were in pursuit, hunting it, then came to its rescue',
+      'saw the griffons take down the cricket, then saw Alaric grab his new greataxe and slash down a griffion nearly in one swing before finishing the other one which was already heavily damaged by Sam as well',
+      'had Girard patch up the cricket again, which was very thankful but impossible to understand until Exilian cast Comprehend Languages and had some tough communication',
+      'accepted a few portions of jerky as thanks from the cricket and received a sack with 3 dried beans and a large 2-headed trident weapon as a sign of thanks from it',
+      'tried their best to ask the cricket for directions but only got as far as being directed further onto the bridge, mentioning a termite mound',
+      'noticed a huge stone archway far, far off to the north, well beyond their reach for now, then reached the end of the bridge, still in the jungle, then noticed a large stone mound nearby',
+      'approached the mound, noticing some large anteater-like creatures which they identified as fiends, but who apparently were not hostile to them and which they decided to ignore after careful collaboration',
+      'continued towards the entrance of the termite mound then noticed the ground shaking as many creatures approached from underground, engaging the party',
+      'were attacked by the termites that damaged the party Castle-8 and Alaric\'s armor, then saw Sam drop a horn of Gunpowder into one of the passageways which blew a large part of the mound apart and killed several termites',
+      'had Girard cast Spiritual Guardians, creating a sphere of little celestial warriors to protect the party, inspiring Ru to do the same but who summoned more devilish spirits, which made short work of the remaining termites',
+      'had Sir Dixon send out his bat familiar to investigate the cavern who lost the connection with the bat about 50 foot in',
+      'looked around the place to investigate if the slaves had come past it, and noticed trails leading into the mound',
+      'had Sir Dixon activate Detect Magic and noticed there was a magic barrier inside the cave, then headed back to Ebonwatch to return another day',
+    ], [
+      'none'
+    ], [
+      'The Party was made aware of the dire situation surrounding the Demon Invasion',
+      'News of the long bridge in the Royal Woodlands made its way back to Ebonwatch'
     ]),
   ]
 }
