@@ -2,24 +2,24 @@ import {LitElement, html, css} from 'lit';
 
 function fetchAllCharacters() {
   return [
-    {name: 'Sam', xp: 33},
+    {name: 'Sam', xp: 34},
     {name: 'Castle-8', xp: 30},
-    {name: 'Horatio ', xp: 28},
+    {name: 'Horatio ', xp: 29},
+    {name: 'Alaric', xp: 25},
     {name: 'Nuk', xp: 25},
-    {name: 'Alaric', xp: 24},
-    {name: 'Ru', xp: 23},
-    {name: 'Bill', xp: 20},
+    {name: 'Ru', xp: 24},
+    {name: 'Bill', xp: 21},
+    {name: 'Exilian', xp: 21},
+    {name: 'Paxton', xp: 21},
     {name: 'Enphine', xp: 20},
-    {name: 'Exilian', xp: 20},
-    {name: 'Paxton', xp: 20},
-    {name: 'Sir Dixon', xp: 19},
-    {name: 'Aboouck', xp: 18},
+    {name: 'Sir Dixon', xp: 20},
+    {name: 'Aboouck', xp: 19},
     {name: 'Drathuul', xp: 18},
+    {name: 'Bavon', xp: 17},
+    {name: 'Freya', xp: 17},
     {name: 'Girard', xp: 17},
-    {name: 'Bavon', xp: 16},
-    {name: 'John', xp: 15},
-    {name: 'Navani', xp: 15},
-    {name: 'Freya', xp: 15}
+    {name: 'John', xp: 17},
+    {name: 'Navani', xp: 17}
   ]
 }
 
