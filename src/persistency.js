@@ -15,7 +15,7 @@ function fetchAllCharacters() {
     {name: 'Aboouck', xp: 26},
     {name: 'Nuk', xp: 26},
     {name: 'Exilian', xp: 24},
-    {name: 'Laydon', xp: 23},
+    {name: 'Layden', xp: 23},
     {name: 'Bavon', xp: 20},
     {name: 'Drathuul', xp: 20},
     {name: 'Freya', xp: 20},
