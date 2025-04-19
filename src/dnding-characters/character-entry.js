@@ -6,7 +6,7 @@ export class CharacterEntry extends LitElement {
       :host {
         display: block;
         padding: 16px;
-        max-width: 800px;
+        max-width: 1000px;
         color: #fff;
       }
       .character-name {
@@ -36,8 +36,12 @@ export class CharacterEntry extends LitElement {
       .right {
         width: 6px;
       }
+      .right {
+        margin-right: 20px;
+      }
       .middle,
-      .middle-filled {
+      .middle-filled,
+      .middle-blue {
         width: 15px;
       }
       .bar .middle,
@@ -49,6 +53,9 @@ export class CharacterEntry extends LitElement {
       }
       .bar .middle-filled {
         background-image: url('/assets/img/frame_mid-full.png');
+      }
+      .bar .middle-blue {
+        background-image: url('/assets/img/frame_mid-blue.png');
       }
       .bar .level-tick {
         border-right-color: #ccc;
@@ -66,6 +73,7 @@ export class CharacterEntry extends LitElement {
     return {
       name: {type: String},
       xp: {type: Number},
+      dreamXp: {type: Number},
       xpPerLevel: {type: Array},
     };
   }
@@ -86,6 +94,8 @@ export class CharacterEntry extends LitElement {
           aResult.push(html`<div class="middle">${this.xpPerLevel.includes(i)?this.xpPerLevel.indexOf(i) + 1:''}</div>`);
         }return aResult;})()}
         <div class="right"></div>
+        <div class="left"></div>
+        <div class="middle">Dreamworld</div>
         </div>
         <div class="bar">
           <div class="left"></div>
@@ -93,6 +103,12 @@ export class CharacterEntry extends LitElement {
             aResult.push(html`<div class="middle${i < this.xp?'-filled':''}${this.xpPerLevel.includes(i + 1)?' level-tick':''}"></div>`);
           }return aResult;})()}
           <div class="right"></div>
+          <div class="left"></div>
+          ${(() => {var aResult = []; for (var i = 0; i < 10; i++) {
+            aResult.push(html`<div class="middle${i < this.dreamXp?'-blue':''}"></div>`);
+          }return aResult;})()}
+          <div class="right"></div>
+        </div>
       </div>
       <slot></slot>
     `;

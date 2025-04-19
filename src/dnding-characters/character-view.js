@@ -23,7 +23,7 @@ export class CharacterView extends LitElement {
   render() {
     return html`
       <h1>Characters</h1>
-      ${this.characters.map(oCharacter => html`<character-entry name="${oCharacter.name}" xp="${oCharacter.xp}" .xpPerLevel=${this.xpPerLevel}></character-entry>`)}
+      ${this.characters.map(oCharacter => html`<character-entry name="${oCharacter.name}" xp="${oCharacter.xp}" dreamXp="${oCharacter.dreamXp}" .xpPerLevel=${this.xpPerLevel}></character-entry>`)}
     `;
   }
 

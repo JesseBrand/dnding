@@ -4,26 +4,27 @@ import {LitElement, html, css} from 'lit';
 
 function fetchAllCharacters () {
   return [
-    { name: 'Castle-8', xp: 41 },
-    { name: 'Sam', xp: 40 },
-    { name: 'Horatio ', xp: 38 },
-    { name: 'Lynel', xp: 37 },
-    { name: 'Bill', xp: 34 },
-    { name: 'Ru', xp: 33 },
-    { name: 'Enphine', xp: 33 },
+    { name: 'Castle-8', xp: 42, dreamXp: 1},
+    { name: 'Sam', xp: 40, dreamXp: 4 },
+    { name: 'Horatio ', xp: 39 },
+    { name: 'Lynel', xp: 38 },
+    { name: 'Bill', xp: 35, dreamXp: 4 },
+    { name: 'Ru', xp: 34, dreamXp: 5 },
+    { name: 'Enphine', xp: 34, dreamXp: 6 },
     { name: 'Paxton', xp: 33 },
+    { name: 'Sir Dixon', xp: 33, dreamXp: 6 },
     { name: 'Alaric', xp: 31 },
-    { name: 'Sir Dixon', xp: 32 },
-    { name: 'Aboouck', xp: 26 },
     { name: 'Nuk', xp: 27 },
+    { name: 'Aboouck', xp: 26 },
     { name: 'Exilian', xp: 24 },
     { name: 'Layden', xp: 23 },
-    { name: 'Bavon', xp: 20 },
-    { name: 'Drathuul', xp: 20 },
-    { name: 'Freya', xp: 20 },
-    { name: 'Girard', xp: 20 },
-    { name: 'John', xp: 20 },
-    { name: 'Navani', xp: 20 }
+    { name: 'Bavon', xp: 21 },
+    { name: 'Drathuul', xp: 21 },
+    { name: 'Freya', xp: 21 },
+    { name: 'Girard', xp: 21 },
+    { name: 'John', xp: 21 },
+    { name: 'Navani', xp: 21 }
+    // Dozak dreamXp: 3
   ]
 }
 
