@@ -6,7 +6,7 @@ function fetchAllCharacters () {
   return [
     { name: 'Castle-8', xp: 42, dreamXp: 1},
     { name: 'Sam', xp: 40, dreamXp: 4 },
-    { name: 'Horatio ', xp: 39 },
+    { name: 'Horatio ', xp: 39, dreamXp: 1 },
     { name: 'Lynel', xp: 38 },
     { name: 'Bill', xp: 35, dreamXp: 4 },
     { name: 'Ru', xp: 34, dreamXp: 5 },
