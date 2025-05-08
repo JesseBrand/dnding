@@ -1,6 +1,6 @@
 import {LitElement, html, css} from 'lit';
 import {CharacterEntry} from './character-entry.js';
-import {getAllCharacters, getXpPerLevel} from './character-manager.js'
+import {getAllCharacters, getXpPerLevel, getXpPerDreamLevel} from './character-manager.js'
 import {max} from 'lodash-es';
 
 export class CharacterView extends LitElement {
@@ -13,6 +13,7 @@ export class CharacterView extends LitElement {
     super();
     this.characters = getAllCharacters();
     this.xpPerLevel = this._trimToRange(getXpPerLevel());
+    this.xpPerDreamLevel = this._trimToRange(getXpPerDreamLevel());
   }
 
   _trimToRange(aXpPerLevel) {
@@ -23,7 +24,7 @@ export class CharacterView extends LitElement {
   render() {
     return html`
       <h1>Characters</h1>
-      ${this.characters.map(oCharacter => html`<character-entry name="${oCharacter.name}" xp="${oCharacter.xp}" dreamXp="${oCharacter.dreamXp}" .xpPerLevel=${this.xpPerLevel}></character-entry>`)}
+      ${this.characters.map(oCharacter => html`<character-entry name="${oCharacter.name}" xp="${oCharacter.xp}" dreamXp="${oCharacter.dreamXp}" .xpPerLevel=${this.xpPerLevel} .xpPerDreamLevel=${this.xpPerDreamLevel}></character-entry>`)}
     `;
   }
 

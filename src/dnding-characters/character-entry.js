@@ -45,7 +45,8 @@ export class CharacterEntry extends LitElement {
         width: 15px;
       }
       .bar .middle,
-      .bar .middle-filled {
+      .bar .middle-filled,
+      .bar .middle-blue {
         border-right: solid 1px #666;
       }
       .bar .middle {
@@ -75,13 +76,15 @@ export class CharacterEntry extends LitElement {
       xp: {type: Number},
       dreamXp: {type: Number},
       xpPerLevel: {type: Array},
+      xpPerDreamLevel: {type: Array},
     };
   }
 
   constructor() {
     super();
     this.xp = 0;
-    this.xpPerLevel = []
+    this.xpPerLevel = [];
+    this.xpPerDreamLevel = [];
   }
 
   render() {
@@ -105,7 +108,7 @@ export class CharacterEntry extends LitElement {
           <div class="right"></div>
           <div class="left"></div>
           ${(() => {var aResult = []; for (var i = 0; i < 10; i++) {
-            aResult.push(html`<div class="middle${i < this.dreamXp?'-blue':''}"></div>`);
+            aResult.push(html`<div class="middle${i < this.dreamXp?'-blue':''}${this.xpPerDreamLevel.includes(i + 1)?' level-tick':''}"></div>`);
           }return aResult;})()}
           <div class="right"></div>
         </div>

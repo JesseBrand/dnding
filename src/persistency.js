@@ -8,8 +8,8 @@ function fetchAllCharacters () {
     { name: 'Sam', xp: 40, dreamXp: 4 },
     { name: 'Horatio ', xp: 39, dreamXp: 1 },
     { name: 'Lynel', xp: 39 },
-    { name: 'Bill', xp: 36, dreamXp: 4 },
-    { name: 'Enphine', xp: 35, dreamXp: 6 },
+    { name: 'Bill', xp: 36, dreamXp: 5 },
+    { name: 'Enphine', xp: 35, dreamXp: 7 },
     { name: 'Ru', xp: 34, dreamXp: 5 },
     { name: 'Paxton', xp: 34 },
     { name: 'Sir Dixon', xp: 34, dreamXp: 6 },
@@ -23,8 +23,8 @@ function fetchAllCharacters () {
     { name: 'Freya', xp: 21 },
     { name: 'Girard', xp: 21 },
     { name: 'John', xp: 21 },
-    { name: 'Navani', xp: 21 }
-    // Dozak dreamXp: 3
+    { name: 'Navani', xp: 21 },
+    { name: 'Sir Dozak the Magnificient', xp: 0, dreamXp: 4 }
   ]
 }
 
