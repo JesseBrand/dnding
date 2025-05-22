@@ -9,7 +9,7 @@ export class SessionView extends LitElement {
   render() {
     return html`
       <h1>Sessions</h1>
-      Session Summaries can now be found at <a style="color:green" href="https://dnding.netlify.app/note/__events__involvement++++on++++the++++shard++++of++++tebinor">https://dnding.netlify.app</a>
+      Session Summaries can now be found at <a style="color:green" href="https://obsidian.dnding.nl/note/__events__Involvement++++on++++the++++Shard++++of++++Tebinor">https://obsidian.dnding.nl</a>
     `;
   }
 
