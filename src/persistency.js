@@ -4,16 +4,18 @@ import {LitElement, html, css} from 'lit';
 
 function fetchAllCharacters () {
   return [
-    { name: 'Castle-8', xp: 47, dreamXp: 1 },
+    { name: 'Castle-8', xp: 48, dreamXp: 1 },
     { name: 'Sam', xp: 42, dreamXp: 5 },
     // { name: 'Horatio ', xp: 42, dreamXp: 1 },
-    { name: 'Lynel', xp: 39 },
+    { name: 'Lynel', xp: 40 },
     { name: 'Enphine', xp: 39, dreamXp: 10 },
-    { name: 'Bill', xp: 38, dreamXp: 7 },
-    { name: 'Sir Dixon', xp: 38, dreamXp: 10 },
-    { name: 'Paxton', xp: 37 },
+    { name: 'Bill', xp: 39, dreamXp: 7 },
+    { name: 'Sir Dixon', xp: 39, dreamXp: 10 },
+    //{ name: 'Paxton', xp: 38 },
     { name: 'Ru', xp: 34, dreamXp: 6 },
+    { name: 'Malrik', xp: 32 },
     { name: 'Alaric', xp: 31 },
+    // { name: 'Jur\'s Next', xp: 28 },
     { name: 'Nuk', xp: 27 },
     { name: 'Aboouck', xp: 26 },
     { name: 'Exilian', xp: 26 },

@@ -6,7 +6,6 @@ export class CharacterEntry extends LitElement {
       :host {
         display: block;
         padding: 16px;
-        max-width: 1000px;
         color: #fff;
       }
       .character-name {
@@ -95,22 +94,28 @@ export class CharacterEntry extends LitElement {
         <div class="left"></div>
         ${(() => {var aResult = []; for (var i = 0; i < this.xpPerLevel[this.xpPerLevel.length - 1] + 1; i++) {
           aResult.push(html`<div class="middle">${this.xpPerLevel.includes(i)?this.xpPerLevel.indexOf(i) + 1:''}</div>`);
-        }return aResult;})()}
-        <div class="right"></div>
-        <div class="left"></div>
-        <div class="middle">Dreamworld</div>
-        </div>
+        }
+        aResult.push(html`<div class="right"></div>`);
+        if (this.dreamXp > 0) {
+          aResult.push(html`<div class="left"></div>`);
+          aResult.push(html`<div class="middle">Dreamworld</div>`);
+          aResult.push(html`<div class="right"></div>`);
+        }
+        return aResult;})()}
+      </div>
         <div class="bar">
           <div class="left"></div>
           ${(() => {var aResult = []; for (var i = 0; i < this.xpPerLevel[this.xpPerLevel.length - 1]; i++) {
             aResult.push(html`<div class="middle${i < this.xp?'-filled':''}${this.xpPerLevel.includes(i + 1)?' level-tick':''}"></div>`);
           }return aResult;})()}
           <div class="right"></div>
-          <div class="left"></div>
-          ${(() => {var aResult = []; for (var i = 0; i < 10; i++) {
-            aResult.push(html`<div class="middle${i < this.dreamXp?'-blue':''}${this.xpPerDreamLevel.includes(i + 1)?' level-tick':''}"></div>`);
+          ${(() => {var aResult = []; if (this.dreamXp > 0) {
+            aResult.push(html`<div class="left"></div>`);
+              for (var i = 0; i < 10; i++) {
+              aResult.push(html`<div class="middle${i < this.dreamXp?'-blue':''}${this.xpPerDreamLevel.includes(i + 1)?' level-tick':''}"></div>`);
+            }
+            aResult.push(html`<div class="right"></div>`);
           }return aResult;})()}
-          <div class="right"></div>
         </div>
       </div>
       <slot></slot>
