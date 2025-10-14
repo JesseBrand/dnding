@@ -98,6 +98,7 @@ export class CharacterEntry extends LitElement {
         aResult.push(html`<div class="right"></div>`);
         if (this.dreamXp > 0) {
           aResult.push(html`<div class="left"></div>`);
+          aResult.push(html`<div class="middle"></div>`);
           aResult.push(html`<div class="middle">Dreamworld</div>`);
           aResult.push(html`<div class="right"></div>`);
         }

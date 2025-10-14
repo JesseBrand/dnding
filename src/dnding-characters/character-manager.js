@@ -6,7 +6,8 @@ function getAllCharacters() {
 }
   
 function getXpPerLevel() {
-  return [0,1,3,6,10,15,20,25,30,36,42,48,54,61,68,75,82,89,97,105];
+  return [0,1,3,6,10,14,19,24,30,36,42,48,55,62,69,78,86,94,102,110];
+  // 1 2 3 4 4 5 5 6 6 6 6 7 7 7 7 8 8 8 8
 }
 
 function getXpPerDreamLevel() {
